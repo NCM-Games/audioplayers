@@ -121,6 +121,7 @@ class AudioPool {
     final player = AudioPlayer()..audioCache = audioCache;
     await player.setSource(source);
     await player.setReleaseMode(ReleaseMode.stop);
+    await player.setPlayerMode(PlayerMode.lowLatency);
     return player;
   }
 
